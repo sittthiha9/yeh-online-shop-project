@@ -18,9 +18,12 @@ const Menus = [
 
 const Drawers = () => {
   const [open, setOpen] = useState(false);
-  const [active, isActive] = useState(false);
   const routeName = usePathname();
   const router = useRouter();
+
+  const openHandler = () => {
+    setOpen(!open)
+  }
 
   return (
     <div
