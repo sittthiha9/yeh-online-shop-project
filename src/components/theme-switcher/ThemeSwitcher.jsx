@@ -27,7 +27,7 @@ const ThemeSwitcher = ({ open }) => {
     <>
       <div
         onClick={switchDarkMode}
-        className={`text-background dark:text-background2 whitespace-nowrap duration-200 text-sm flex items-center gap-x-4 cursor-pointer my-2 px-2 py-2 rounded-md bg-accent`}
+        className={`text-background dark:text-background2 whitespace-nowrap duration-200 text-sm flex items-center gap-x-4 cursor-pointer my-2 px-2 py-2 rounded-md bg-accent dark:bg-accent2`}
       >
         <span className="text-2xl block float-left">
           {theme === "light" ? <MdDarkMode /> : <MdLightMode />}

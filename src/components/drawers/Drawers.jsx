@@ -59,27 +59,29 @@ const Drawers = () => {
           The Y.E.H Corner
         </h1>
       </div>
-      <ul className={"pt-6 flex-col justify-between"}>
-        {Menus.map((menu, index) => (
-          <li
-            onClick={() => router.push(menu.route)}
-            key={index}
-            className={`text-background dark:text-background2 whitespace-nowrap duration-200 text-sm flex items-center gap-x-4 cursor-pointer my-2 px-2 py-2 hover:bg-accent/60 dark:hover:bg-accent2/75 rounded-md ${
-              routeName === menu.route ? "bg-accent" : ""
-            }`}
-          >
-            <span className="text-2xl block float-left">{menu.icon}</span>
-            <span
-              className={`${
-                !open && "hidden"
-              } text-background dark:text-background2 duration-200 flex-1`}
+      <div className={"pt-6 flex-1 justify-end"}>
+        <ul>
+          {Menus.map((menu, index) => (
+            <li
+              onClick={() => router.push(menu.route)}
+              key={index}
+              className={`text-background dark:text-background2 whitespace-nowrap duration-200 text-sm flex items-center gap-x-4 cursor-pointer my-2 px-2 py-2 hover:bg-accent/60 dark:hover:bg-accent2/75 rounded-md ${
+                routeName === menu.route ? "bg-accent dark:bg-accent2" : ""
+              }`}
             >
-              {menu.title}
-            </span>
-          </li>
-        ))}
+              <span className="text-2xl block float-left">{menu.icon}</span>
+              <span
+                className={`${
+                  !open && "hidden"
+                } text-background dark:text-background2 duration-200 flex-1`}
+              >
+                {menu.title}
+              </span>
+            </li>
+          ))}
+        </ul>
         <ThemeSwitcher open={open} />
-      </ul>
+      </div>
     </div>
   );
 };
