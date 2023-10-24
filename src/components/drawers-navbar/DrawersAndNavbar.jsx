@@ -4,7 +4,7 @@ import NavBar from "@/components/nav-bar/NavBar";
 
 const DrawersAndNavbar = ({children, title}) => {
   return (
-    <div className="flex-1 flex">
+    <div className="flex-1 bg-background dark:bg-background2 flex">
       <Drawers />
       <div className="flex-1 flex-col">
         <NavBar title={title}/>
